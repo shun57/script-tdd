@@ -5,8 +5,8 @@ describe("multiply関数", () => {
     expect(Script.multiply(3, 10, 3)).toBe(90);
   });
 
-  test("10,5を引数として渡すと50を返す", () => {
-    expect(Script.multiply(10, 5)).toBe(50);
+  test("100,10を引数として渡すと1000を返す", () => {
+    expect(Script.multiply(100, 10)).toBe(1000);
   });
 
   test("1を1個引数として渡すと1を返す", () => {
@@ -106,8 +106,8 @@ describe("multiply関数", () => {
     }).toThrow();
   });
 
-  test("100,100を引数として渡すと「big big number」を返す", () => {
-    expect(Script.multiply(100, 100)).toBe("big big number");
+  test("1001,1を引数として渡すと「big big number」を返す", () => {
+    expect(Script.multiply(1001, 1)).toBe("big big number");
   });
 });
 
@@ -116,8 +116,8 @@ describe("add関数", () => {
     expect(Script.add(3, 10, 3)).toBe(16);
   });
 
-  test("10,5を引数として渡すと15を返す", () => {
-    expect(Script.add(10, 5)).toBe(15);
+  test("999,1を引数として渡すと1000を返す", () => {
+    expect(Script.add(999, 1)).toBe(1000);
   });
 
   test("1を1個引数として渡すと1を返す", () => {
@@ -223,8 +223,8 @@ describe("add関数", () => {
 });
 
 describe("substract関数", () => {
-  test("10,3を渡すと7を返す", () => {
-    expect(Script.substract(10, 3)).toBe(7);
+  test("10,10を渡すと0を返す", () => {
+    expect(Script.substract(10, 10)).toBe(0);
   });
 
   test("100,10,10を渡すと80を返す", () => {
@@ -330,6 +330,10 @@ describe("substract関数", () => {
 
   test("3,10,3を引数として渡すと「negative number」を返す", () => {
     expect(Script.substract(3, 10, 3)).toBe("negative number");
+  });
+
+  test("10,11を引数として渡すと「negative number」を返す", () => {
+    expect(Script.substract(10, 11)).toBe("negative number");
   });
 });
 
